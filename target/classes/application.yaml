@@ -1,0 +1,27 @@
+server:
+  port: 8989
+  context-path: /kaoshi
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+    multipart:
+      max-file-size: 10mb
+      max-request-size: 100mb
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+#mybatis:
+#  type-aliases-package: com.baizhi.entity
+#  mapper-locations: com/baizhi/dao/*Dao.xml
